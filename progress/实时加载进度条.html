@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时加载进度条</title>
+    <style>
+        .loading{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background: #ffffff;
+        }
+        .loading .pic{
+            width: 77px;
+            height: 77px;
+            background: url("../images/loading.gif");
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        document.onreadystatechange=function () { //监听加载
+            if (document.readyState=="complete"){
+                var clazz = document.getElementsByClassName("loading");
+                    for (var i = 0; i<clazz.length;i++) {
+                        clazz[i].style.display="none";
+                    }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<!-- 初始化界面 -->
+<div class="loading">
+    <div class="pic"></div>
+</div>
+
+<img src="http://bbsfiles.vivo.com.cn/vivobbs/attachment/forum/201604/30/210144dp5qzr5l4jqt5c47.jpg">
+<img src="http://g.hiphotos.baidu.com/zhidao/pic/item/b21c8701a18b87d6e1dcd6bc000828381e30fdf3.jpg">
+<img src="http://bbsfiles.vivo.com.cn/vivobbs/attachment/forum/201604/30/210143kacoecqizfi0zg5a.jpg">
+<img src="http://desk.fd.zol-img.com.cn/g5/M00/0B/02/ChMkJ1YfCjmICuEQAASHSROLt9gAADsFAOsjX4ABIdh934.jpg">
+<img src="http://desk.fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/07/ChMkJ1bKyyOIEM-iAAoiMiNFwUcAALImgJO8skACiJK516.jpg">
+<img src="http://a.hiphotos.baidu.com/zhidao/pic/item/a71ea8d3fd1f41341f211a1f271f95cad1c85eb8.jpg">
+<img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1206/11/c0/11958819_1339405691583.jpg">
+<img src="http://img.kutoo8.com/upload/image/34092560/1390442684896_960x540.jpg">
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+</head>
+<body>
+
+<form name="myform" action="" onsubmit="return validateform()" method="post">
+    name:<input type="text" name="name"><br>
+    <input type="submit" value="提交">
+</form>
+
+<script type="text/javascript">
+    function validateform() {
+        var x=document.forms["myform"]["name"].value;
+        if (x==null || x==""){
+            alert("name必须填写！");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
